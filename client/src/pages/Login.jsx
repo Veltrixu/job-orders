@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom'
 import Input from '../component/Input'
 
-import Logo from '../assets/Logo.png'
 import BG from '../assets/bg.png'
+import Logo from '../component/Logo'
 
 function Register() {
     return (
         <div className='w-full h-screen min-h-screen'>
             <div
-                className='grid md:grid-cols-2 gap-5 grid-cols-1 items-center justify-center min-h-screen p-4 md:p-12 lg:p-20 bg-cover'
+                className='grid md:grid-cols-2 gap-10 grid-cols-1 items-center justify-center min-h-screen p-4 md:p-12 lg:p-20 bg-cover'
                 style={{
                     backgroundImage: `url(${BG})`,
                     backgroundSize: 'cover',
@@ -18,8 +18,8 @@ function Register() {
                     minHeight: '100vh',
                 }}
             >
-                <div className="flex justify-center md:justify-start">
-                    <img src={Logo} alt="Job Orders Logo" className='w-64 md:w-96 h-auto m-auto md:ml-auto md:mr-0' />
+                <div className="flex justify-center h-full md:justify-start">
+                    <Logo/>
                 </div>
                 <form className='flex flex-col p-4 md:p-6 w-full m-auto max-w-md md:mr-auto md:ml-0'>
                     <h1 className='text-2xl md:text-3xl font-bold mb-5'>Login</h1>

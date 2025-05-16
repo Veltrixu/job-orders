@@ -1,9 +1,10 @@
 import { Link, useNavigate, useNavigation } from 'react-router-dom';
 import { useState } from 'react';
 import axiosInstance from '../api/axios.js';
-import Input from '../component/Input';
-import Logo from '../assets/Logo.png';
+import Input from '../component/Input.jsx';
+
 import BG from '../assets/bg.png';
+import Logo from '../component/Logo.jsx';
 
 function Register() {
     // Defining state for each input field
@@ -58,7 +59,7 @@ function Register() {
                 }}
             >
                 <div className="flex justify-center md:justify-start">
-                    <img src={Logo} alt="Job Orders Logo" className='w-64 md:w-96 h-auto m-auto md:ml-auto md:mr-0' />
+                    <Logo/>
                 </div>
                 <form onSubmit={handleSubmit} className='flex flex-col p-4 md:p-6 w-full m-auto max-w-md md:mr-auto md:ml-0'>
                     <h1 className='text-2xl md:text-3xl font-bold mb-5'>Register</h1>

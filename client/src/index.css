@@ -1,1 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
+
+:root {
+  --primary: #0d6efd;
+  --primary-hover: #3a8cff;
+  --danger: #d32f2f;
+  --light-danger: #fdeaea;
+}
+
+* {
+  font-family: "Roboto", cursive;
+}
+
+.active {
+  color: var(--primary);
+  font-weight: 600;
+}
