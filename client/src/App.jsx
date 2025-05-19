@@ -1,14 +1,14 @@
 import Sidebar from "./component/Sidebar";
-import Topbar from "./component/Topbar";
+import AdminDashboard from "./Admin/AdminDashboard";
 
 function App() {
   return (
-    <div className="md:grid md:grid-cols-[12rem_1fr] h-screen">
+    <div className="md:grid md:grid-cols-[15rem_1fr] h-screen">
       <div>
         <Sidebar />
       </div>
       <div>
-        <Topbar />
+        <AdminDashboard />
       </div>
     </div>
   );
