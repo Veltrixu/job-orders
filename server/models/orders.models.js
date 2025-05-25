@@ -6,7 +6,7 @@ const JobOrderSchema = new mongoose.Schema({
         ref: 'User',
         required: true
     },
-    title: {
+    department: {
         type: String,
         required: true,
     },
@@ -27,6 +27,10 @@ const JobOrderSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    machineCost: {
+        type: String,
+        required: true,
+    },
     urgency: {
         type: String,
         enum: ['Low', 'Medium', 'High'],
@@ -34,7 +38,17 @@ const JobOrderSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ['Pending', 'Approved', 'Rejected', 'In Progress', 'Cancelled', 'Completed'],
+        enum: ['Pending', 'Approved', 'Rejected', 'In Progress', 'Cancelled', 'Completed', 'Incomplete'],
+        default: 'Pending'
+    },
+    assignedTo: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        default: null
+    },
+    deliveryStatus: {
+        type: String,
+        enum: ['Pending', 'Delivered', 'Not Delivered'],
         default: 'Pending'
     },
     requestedDate: {
@@ -44,6 +58,10 @@ const JobOrderSchema = new mongoose.Schema({
     dueDate: {
         type: Date,
         required: true
+    },
+    remarks: {
+        type: String,
+        default: ''
     }
 })
 

@@ -24,7 +24,7 @@ function Sidebar() {
         <SidebarLink to="/" name="Dashboard" icon={faHome} />
         <SidebarLink to="/job-orders" name="Job Orders" icon={faFile} />
         <SidebarLink to="/reports" name="Reports" icon={faFileAlt} />
-        <SidebarLink to="/users" name="Users" icon={faUser} />
+        <SidebarLink to="/users" name="Staff" icon={faUser} />
         <SidebarLink to="/settings" name="Settings" icon={faCog} />
       </div>
       <div className="mt-auto mb-0">

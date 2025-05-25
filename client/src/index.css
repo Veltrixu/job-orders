@@ -34,3 +34,8 @@ body {
   font-weight: 600;
   background: var(--primary-color);
 }
+
+.activate {
+  font-weight: 600;
+  color: #2563EB;
+}

@@ -1,5 +1,4 @@
 import Sidebar from "./component/Sidebar";
-import AdminDashboard from "./Dashboard/AdminDashboard";
 import { Outlet } from "react-router-dom";
 
 function App() {
