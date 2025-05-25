@@ -1,5 +1,6 @@
 import Sidebar from "./component/Sidebar";
-import AdminDashboard from "./Admin/AdminDashboard";
+import AdminDashboard from "./Dashboard/AdminDashboard";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
         <Sidebar />
       </div>
       <div>
-        <AdminDashboard />
+        <Outlet />
       </div>
     </div>
   );

@@ -5,25 +5,27 @@ import {
   faCog,
   faRightFromBracket,
   faUser,
+  faFile,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-import Logo from "../assets/BlueLogo.png";
+import Logo from "../assets/VeltrixuLogo.png";
 
 function Sidebar() {
   return (
-    <div className="flex flex-col h-full p-[1rem_2rem] shadow-2xl border-r-1 border-[#00000010] bg-white">
+    <div className="flex fixed flex-col max-w-[15rem] w-full h-full p-[0_1em] shadow-xl border-r-1 border-[#00000025] bg-white">
       <div className="flex items-center mb-3">
         <img src={Logo} alt="Veltrixu Logo" className="w-18 ml-[-10px]" />
-        <h1 className="font-bold text-xl tracking-wide">Veltrixu</h1>
+        <h1 className="font-bold text-xl">Veltrixu</h1>
       </div>
       <div>
         <p className="uppercase text-sm text-[#808080] tracking-wide mb-3">Main Menu</p>
         <SidebarLink to="/" name="Dashboard" icon={faHome} />
-        <SidebarLink to="/dsa" name="Reports" icon={faFileAlt} />
-        <SidebarLink to="/asdas" name="Users" icon={faUser} />
-        <SidebarLink to="/asdas" name="Settings" icon={faCog} />
+        <SidebarLink to="/job-orders" name="Job Orders" icon={faFile} />
+        <SidebarLink to="/reports" name="Reports" icon={faFileAlt} />
+        <SidebarLink to="/users" name="Users" icon={faUser} />
+        <SidebarLink to="/settings" name="Settings" icon={faCog} />
       </div>
       <div className="mt-auto mb-0">
         <Link
