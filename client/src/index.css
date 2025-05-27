@@ -38,4 +38,7 @@ body {
 .activate {
   font-weight: 600;
   color: #2563EB;
+  text-decoration: underline;
+  text-underline-offset: 1em;
+  text-decoration-thickness: 2px;
 }

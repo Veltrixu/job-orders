@@ -1,15 +1,5 @@
 import SidebarLink from "./SidebarLink";
-import {
-  faHome,
-  faFileAlt,
-  faCog,
-  faRightFromBracket,
-  faUser,
-  faFile,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-
 import Logo from "../assets/VeltrixuLogo.png";
 
 function Sidebar() {
@@ -20,19 +10,20 @@ function Sidebar() {
         <h1 className="font-bold text-xl">Veltrixu</h1>
       </div>
       <div>
-        <p className="uppercase text-sm text-[#808080] tracking-wide mb-3">Main Menu</p>
-        <SidebarLink to="/" name="Dashboard" icon={faHome} />
-        <SidebarLink to="/job-orders" name="Job Orders" icon={faFile} />
-        <SidebarLink to="/reports" name="Reports" icon={faFileAlt} />
-        <SidebarLink to="/users" name="Staff" icon={faUser} />
-        <SidebarLink to="/settings" name="Settings" icon={faCog} />
+        <p className="uppercase text-sm text-[#808080] tracking-wide mb-3">
+          Main Menu
+        </p>
+        <SidebarLink to="/" name="Dashboard" />
+        <SidebarLink to="/job-orders" name="Job Orders" />
+        <SidebarLink to="/reports" name="Reports" />
+        <SidebarLink to="/staff" name="Staff" />
+        <SidebarLink to="/settings" name="Settings" />
       </div>
       <div className="mt-auto mb-0">
         <Link
-          to="/auth/login"
+          to="/auth/logout"
           className="flex gap-2 items-center text-[var(--danger)] hover:bg-[var(--light-danger)] p-[0.5rem_1rem] rounded-sm transition-all duration-200 ease"
         >
-          <FontAwesomeIcon icon={faRightFromBracket} />
           Logout
         </Link>
       </div>
